@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Letter by Letter JS</title>
+</head>
+<body>
+
+<div class="example"></div>
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/l-by-l.js"></script>
+
+<script>
+jQuery(document).ready(function($){
+    
+    $(".example").lbyl({
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis a quam a pellentesque. Proin maximus, nulla non molestie scelerisque, ligula purus lacinia massa, et dapibus quam mi at mi.",
+        speed: 10,
+        type: 'show',
+        fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+        finished: function(){ console.log('finished') } // Finished Callback
+    });
+
+});
+</script>
+
+</body>
+</html>
